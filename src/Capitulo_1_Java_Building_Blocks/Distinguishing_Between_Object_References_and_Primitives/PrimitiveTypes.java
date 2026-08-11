@@ -1,0 +1,5 @@
+package Capitulo_1_Java_Building_Blocks.Distinguishing_Between_Object_References_and_Primitives;
+
+public class PrimitiveTypes {
+
+}
