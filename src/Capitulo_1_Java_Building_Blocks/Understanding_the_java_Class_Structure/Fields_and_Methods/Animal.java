@@ -6,9 +6,12 @@ public class Animal {
 
     public String getName(){
         return name;
-    }
+    } // obtener nombre
 
-    public void setName(String newName){
+    public void setName(String newName){ // establecer un nombre
         name = newName;
     }
+
+    //public int numberVisitors(int month) retorno de una variable tipo int
+
 }

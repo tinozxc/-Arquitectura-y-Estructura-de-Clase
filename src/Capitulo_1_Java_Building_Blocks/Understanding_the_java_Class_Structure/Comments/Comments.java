@@ -2,13 +2,34 @@ package Capitulo_1_Java_Building_Blocks.Understanding_the_java_Class_Structure.C
 
 public class Comments {
 
+    public static void main (String[] args){
+        System.out.println("Dia1 , tema1 -- comentarios");
+    }
+
     /* coment until end of line
+
+    /* Multiple
     *
-    *
-    * */
+     */
+
+    /**
+     *  Javadoc multiple-line comment
+     * @author  Jeane and Scott
+     */
+
+    /*
+    * // anteater
+     */
 
     // bear
-    // cat
+    // //  cat
 
+    // /* dog */
+    /* elephant */
+    /*
+     * /* ferret */
+   //  */   aqui falla no comentara
+
+     // /* */ */ aqui falla no tiene un comentario bloque donde inicie /*
 
 }

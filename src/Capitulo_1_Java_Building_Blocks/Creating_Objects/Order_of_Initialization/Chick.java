@@ -15,3 +15,7 @@ public class Chick {
          System.out.println(chick.name);
      }
 }
+
+
+//{System.out.printl(name)} // DOES NOT COMPILE
+// private string name = "Fluffy";
