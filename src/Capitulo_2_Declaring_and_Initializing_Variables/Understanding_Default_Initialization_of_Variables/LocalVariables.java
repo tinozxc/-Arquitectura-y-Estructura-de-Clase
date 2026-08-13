@@ -4,8 +4,8 @@ public class LocalVariables {
 
     public int notValid(){
         int y = 10;
-        int x ;
-        int reply = x + y; // Does NOT COMPILE; valor no declarado
+        int x = 0 ;
+         int reply = x + y; // Does NOT COMPILE; valor no declarado
         return reply;
     }
 
