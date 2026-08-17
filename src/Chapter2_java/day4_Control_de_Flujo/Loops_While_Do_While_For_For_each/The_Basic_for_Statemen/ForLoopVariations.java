@@ -1,4 +1,4 @@
-package Chapter2_java.day4.Loops_While_Do_While_For_For_each.The_Basic_for_Statemen;
+package Chapter2_java.day4_Control_de_Flujo.Loops_While_Do_While_For_For_each.The_Basic_for_Statemen;
 
 public class ForLoopVariations {
 
