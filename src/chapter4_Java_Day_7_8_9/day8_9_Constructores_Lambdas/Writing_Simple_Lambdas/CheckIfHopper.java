@@ -1,0 +1,10 @@
+package chapter4_Java_Day_7_8_9.day8_9_Constructores_Lambdas.Writing_Simple_Lambdas;
+
+//clase que implementa los metodos de la interfaz
+public class CheckIfHopper implements CheckTrait {
+
+    public boolean test(Animal a) {
+        return a.canHop();
+    }
+
+}

@@ -1,0 +1,75 @@
+package chapter4_Java_Day_7_8_9.Day7_Métodos_y_EncapsulamientoI.Static_and_Methods;
+
+import java.util.*;
+// import static java.util.Arrays;
+// ERROR: No se puede importar clase con static import
+
+public class staticDemo {
+
+
+    // VARIABLES ESTATICAS
+
+    private static int one;                    // Variable static normal
+    private static final int two;              // final sin inicializar
+    private static final int three = 3;        // final inicializada
+    // private static final int four;          // ERROR: no inicializada
+
+    // ============================================
+    // 2. STATIC INITIALIZER (BLOQUE ESTATICO)
+    // ============================================
+    static {
+        one = 1;        // OK: variable no final
+        two = 2;        // OK: primera y unica asignacion
+        // three = 3;   // ERROR: ya fue inicializada en la declaracion
+        // two = 4;     // ERROR: segunda asignacion a final
+    }
+
+
+    // STATIC INITIALIZER CON CALCULOS
+
+    private static final int NUM_SECONDS_PER_HOUR;
+
+    static {
+        int numSecondsPerMinute = 60;
+        int numMinutesPerHour = 60;
+        NUM_SECONDS_PER_HOUR = numSecondsPerMinute * numMinutesPerHour;  // 3600
+        System.out.println("Static initializer ejecutado");
+    }
+
+
+    //  STATIC INITIALIZER CON COLLECTION
+    private static final List<String> NOMBRES;
+
+    static {
+        NOMBRES = new ArrayList<>();
+        NOMBRES.add("Juan");
+        NOMBRES.add("Maria");
+        NOMBRES.add("Pedro");
+    }
+
+    public static void demostrarErrores() {
+        System.out.println("\nERRORES COMUNES CON STATIC IMPORTS:");
+
+        // ERROR 1: import static con clase (no metodo)
+        System.out.println("  1. import static java.util.Arrays; // ERROR");
+        System.out.println("     -> Static import es solo para miembros estaticos");
+
+        // ERROR 2: orden incorrecto
+        System.out.println("  2. static import java.util.Arrays.*; // ERROR");
+        System.out.println("     -> El orden correcto es 'import static'");
+
+        // ERROR 3: usar nombre de clase sin importarla
+        System.out.println("  3. Arrays.asList('one'); // ERROR");
+        System.out.println("     -> Si importas solo el metodo, no puedes usar Arrays.");
+
+        System.out.println("\nEJEMPLOS CORRECTOS:");
+        System.out.println("  import static java.util.Arrays.asList;");
+        System.out.println("  asList('one', 'two'); // OK");
+        System.out.println();
+
+        System.out.println("  import static java.util.Arrays.*;");
+        System.out.println("  asList('one', 'two'); // OK");
+        System.out.println("  sort(array); // OK");
+    }
+}
+
